@@ -14,7 +14,7 @@ public class BallInit : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             var g = Instantiate(BallPrefab, Balls.transform);
-            g.transform.position = new Vector3(0, 0, 0);
+            g.transform.position = new Vector3(Random.Range(-10,10), Random.Range(-10, 10), Random.Range(-10, 10));
         }
     }
 
