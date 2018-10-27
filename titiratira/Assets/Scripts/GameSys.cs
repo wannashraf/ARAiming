@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class GameSys : MonoBehaviour {
     public GameObject BallBox;
     public GameObject Texta;
+    public GameObject Textb;
+    private GameObject Timer;
+    private GameObject Last;
     public bool IsTracking;
     private bool timerstart;
     public int ballcount;
@@ -24,8 +27,10 @@ public class GameSys : MonoBehaviour {
         if (IsTracking && Spawn == false)
         {
             BallBox.SetActive(true);
+            Textb.SetActive(false);
+            Texta.SetActive(true);
             Spawn = true;
-            ballcount = 30;
+            ballcount = 3;
             timerstart = true;
         }
 
@@ -50,11 +55,14 @@ public class GameSys : MonoBehaviour {
         if(ballcount > 0 && timerstart)
         {
             nowtime += Time.deltaTime;
+            Timer = GameObject.FindGameObjectWithTag("Timer");
+            Last = GameObject.FindGameObjectWithTag("Last");
+            Timer.GetComponent<Text>().text = nowtime.ToString("F0");
+            Last.GetComponent<Text>().text = ballcount.ToString();
         }
         else
         {
-            Texta.SetActive(true);
-            Texta.GetComponent<Text>().text = nowtime.ToString();
+
         }
 
 	}
