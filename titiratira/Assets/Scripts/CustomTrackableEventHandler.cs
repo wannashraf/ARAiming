@@ -6,8 +6,8 @@ using Vuforia;
 
 public class CustomTrackableEventHandler : DefaultTrackableEventHandler {
     public GameObject ballmaster;
+    public GameObject tama;
     private GameSys sys;
-    private BallInit BI;
 
     protected override void OnTrackingFound()
     {
@@ -19,17 +19,17 @@ public class CustomTrackableEventHandler : DefaultTrackableEventHandler {
             if (gameObject.name == "asagi")
             {
                 Debug.Log("asagi");
-                sys.ballcount = 8;
+                sys.ballcount = 16;
             }
             else if (gameObject.name == "kemo")
             {
                 Debug.Log("kemo");
-                sys.ballcount = 16;
+                sys.ballcount = 12;
             }
             else if (gameObject.name == "DT")
             {
                 Debug.Log("DT");
-                sys.ballcount = 20;
+                sys.ballcount = 8;
             }
         }
         

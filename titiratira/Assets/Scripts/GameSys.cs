@@ -47,24 +47,25 @@ public class GameSys : MonoBehaviour {
 	void Update () {
         if (IsTracking && Spawn == false)
         {
-            if(ballcount == 20)
-            {
-                BallBox3.SetActive(true);
-                BI3.Ballcount = ballcount;
-                BI3.IsRestart = true;
-            }
-            else if (ballcount == 16)
-            {
-                BallBox2.SetActive(true);
-                BI2.Ballcount = ballcount;
-                BI2.IsRestart = true;
-            }
-            else if (ballcount == 8)
+            if (ballcount == 16)
             {
                 BallBox1.SetActive(true);
                 BI1.Ballcount = ballcount;
                 BI1.IsRestart = true;
             }
+            else if (ballcount == 12)
+            {
+                BallBox2.SetActive(true);
+                BI2.Ballcount = ballcount;
+                BI2.IsRestart = true;
+            }
+            else if(ballcount == 8)
+            {
+                BallBox3.SetActive(true);
+                BI3.Ballcount = ballcount;
+                BI3.IsRestart = true;
+            }
+            
             Textb.SetActive(false);
             Texta.SetActive(true);
             Spawn = true;

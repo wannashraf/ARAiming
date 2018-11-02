@@ -7,7 +7,6 @@ public class DestroyBall : MonoBehaviour {
     private GameObject master;
     public GameObject Effect;
     private GameSys GS;
-    private Audio A;
     
     // Use this for initialization
     void Start()

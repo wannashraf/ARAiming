@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54629071693339532}
   - component: {fileID: 114350587132288348}
   - component: {fileID: 82051524181634578}
+  - component: {fileID: 114707986091620468}
   m_Layer: 0
   m_Name: Tama
   m_TagString: unko
@@ -210,7 +211,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAlive: 0
   Effect: {fileID: 1306959813550850, guid: c161f40115e0645489a731554bef7e07, type: 2}
-  boom: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+--- !u!114 &114707986091620468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918924831192950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36400e6757b2fa74ba10183663278fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canmoveing: 0
+  movespeed: 0
 --- !u!135 &135577410325628416
 SphereCollider:
   m_ObjectHideFlags: 1
